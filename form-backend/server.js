@@ -23,7 +23,7 @@ app.post('/api/formdata', (req, res) => {
   const validityDate = new Date(req.body.validityUpto);
 
   if (validityDate < currentDate) {
-    return res.status(400).json('Error: validityUpto date is in the past.');
+    return res.status(400).json('validityUpto date is in the past.');
   }
 
   newFormData.save()
